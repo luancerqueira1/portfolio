@@ -1,0 +1,63 @@
+:root {
+  --color-background: #141C2E;
+  --primary-color: #111827;
+  --secondary-color: #4285f4;
+  --color-white: #edeffd;
+  --font-primary: "Poppins", sans-serif;
+  --transition: all 300ms linear;
+  --box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
+  --border-radius: 5px;
+}
+
+.toogle-theme {
+  --color-background: #edeffd;
+  --secondary-color: #0ea2f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-margin-top: 2rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 60%;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+.header-content .nav-bar ul {
+  list-style: none;
+}
+.header-content .nav-bar ul li {
+  margin: 1rem;
+  padding: 0.3rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  color: red;
+}
+.header-content .nav-bar ul li a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.header-content .nav-bar ul li:hover {
+  background-color: var(--secondary-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

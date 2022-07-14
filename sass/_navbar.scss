@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.header-content {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 60%;
+   background-color: var(--primary-color);
+   box-shadow: var(--box-shadow);
+
+   
+   .nav-bar ul {
+    list-style: none;
+   
+      li {
+         margin: 1rem;
+         padding: .3rem;
+         border-radius: var(--border-radius);
+         transition: var(--transition);
+         color: red;
+         
+         a {
+            text-decoration: none;
+            color: var(--color-white);
+         }
+         
+         &:hover {
+            background-color: var(--secondary-color);
+            
+         }
+      }
+   }
+}
+

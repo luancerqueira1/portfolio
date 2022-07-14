@@ -1,0 +1,22 @@
+
+:root {
+   --color-background: #141C2E;
+   --primary-color: #111827;
+   --secondary-color: #4285f4;
+   --color-white: #edeffd;
+
+   --font-primary: 'Poppins', sans-serif;
+
+   --transition: all 300ms linear;
+
+   --box-shadow: 0 2px 2px rgba(0, 0, 0, 0.123);
+
+   --border-radius: 5px;
+
+}
+
+.toogle-theme {
+   --color-background: #edeffd;
+   --secondary-color: #0ea2f6;  
+}
+
