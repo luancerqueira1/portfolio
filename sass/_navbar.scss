@@ -1,20 +1,6 @@
 @use 'variables' as *;
 
 
-#open-btn {
-   position: absolute;
-   right: 1.5rem;
-   top: 1.5rem;
-
-   div {
-      width: 1.5rem;
-      height: 3px;
-      margin-bottom: 4px;
-      border-radius: 5rem;
-      background-color: grey;
-      cursor: pointer;
-   }
-}
 .header {
 
    // .logo {
@@ -23,7 +9,7 @@
 
 
    .header-content {
-      position: fixed;
+      position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
@@ -31,93 +17,95 @@
       background-color: var(--primary-color);
       box-shadow: var(--box-shadow);
       padding: 1rem;
-      // transform: translateY(100%);
+      transition: all 1s ease-in-out;
+      
+      // transform: translateX(100%);
 
       
-         .theme-toggle {
+      .theme-toggle {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: .7rem;
+
+         
+      
+         //TOGGLE BTNS
+         .theme-toggle-btns {
+            width: 5rem;
+            padding: .2rem .4rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
-            margin: 1.5rem 0;
+            background-color: var(--secondary-color);
+            border-radius: 100rem;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.100);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
 
-            .hamburger-menu {
-            
-               div {
-                  width: 1.5rem;
-                  height: 3px;
-                  margin: 4px 0;
-                  border-radius: 5rem;
-                  background-color:grey;
-                  transform-origin: left;
-                  cursor: pointer;
-                  transition: var(--transition);
-               }
-
-               .bar-top{
-                  transform: rotate(45deg);
-                 
-               }
-
-               .bar-middle {
-                  transform: translateX(1rem);
-                  opacity: 0;
-               }
-
-              .bar-bottom {
-               transform: rotate(-45deg) ;
-              
-               }
+            &::before {
+               content: '';
+               // position: absolute;
+               left: 50%;
+               right: 0;
+               bottom: 0;
+               top: 0;
+               border-radius: 100rem;
+               background-color:#ffffff;
+               display: none;
             }
 
-            .theme-toggle-btns {
-               border-radius: var(--border-radius);
-               background-color: var(--primary-color);
-               display: flex;
-               justify-content: center;
-               align-items: center;
-
-               span {
-                  width: 5rem;
-                  padding: .2rem .5rem;
-                  display: flex;
-                  justify-content: space-evenly;
-                  align-items: center;
-                  background-color: var(--secondary-color);
-                  border-radius: 5rem;
-                  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.100);
-                  position: relative;
-                  overflow: hidden;
-
-                  &::before {
-                     content: '';
-                     position: absolute;
-                     left: 50%;
-                     right: 0;
-                     bottom: 0;
-                     top: 0;
-                     border-radius: 100rem;
-                     background-color:white;
-                     display: none;
-                  }
-               }
-
-            }
-
+            //TOGGLE BTNS ICONS
             .bx {
                font-size: 20px;
                color: var(--color-white);
             }
 
             .bxs-moon {
-               color: #101010;
+               color: #1f1d1d;
             }
 
             .bxs-sun {
                color: #FFFF33;
             }
+         } 
+      }
+
+      //HAnBURGER MENU 
+      .hamburger-menu {
+         position: sticky;
+         top: 1rem;
+         left: 1rem;
+         .bar-top,
+         .bar-middle,
+         .bar-bottom {
+            width: 1.5rem;
+            height: 3px;
+            margin: 5px 0;
+            border-radius: 5rem;
+            background-color: grey;
+            transform-origin: left;
+            cursor: pointer;
+            transition: var(--transition);
          }
 
-      .nav-bar  {
+         .bar-top {
+            transform: rotate(45deg) translateY(-1px);
+
+         }
+
+         .bar-middle {
+            opacity: 0;
+         }
+
+         .bar-bottom {
+            transform: rotate(-45deg) translateY(1px);
+
+         }
+      }
+
+      .navbar  {
          
       
          li {
@@ -140,4 +128,7 @@
          }
       }
    }
+}
+.open-navbar {
+   transform: translateX(0);
 }

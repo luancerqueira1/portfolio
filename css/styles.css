@@ -30,28 +30,25 @@ body {
   font-family: var(--font-primary);
 }
 
-.container {
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
+a {
+  text-decoration: none;
 }
 
-#open-btn {
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+li {
+  list-style: none;
 }
-#open-btn div {
-  width: 1.5rem;
-  height: 3px;
-  margin-bottom: 4px;
-  border-radius: 5rem;
-  background-color: grey;
-  cursor: pointer;
+
+section {
+  padding: 2rem 0 3rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
 }
 
 .header .header-content {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -59,74 +56,74 @@ body {
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
   padding: 1rem;
+  transition: all 1s ease-in-out;
 }
 .header .header-content .theme-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem 0;
+  margin-bottom: 0.7rem;
 }
-.header .header-content .theme-toggle .hamburger-menu div {
+.header .header-content .theme-toggle .theme-toggle-btns {
+  width: 5rem;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 100rem;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.header .header-content .theme-toggle .theme-toggle-btns::before {
+  content: "";
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 100rem;
+  background-color: #ffffff;
+  display: none;
+}
+.header .header-content .theme-toggle .theme-toggle-btns .bx {
+  font-size: 20px;
+  color: var(--color-white);
+}
+.header .header-content .theme-toggle .theme-toggle-btns .bxs-moon {
+  color: #1f1d1d;
+}
+.header .header-content .theme-toggle .theme-toggle-btns .bxs-sun {
+  color: #FFFF33;
+}
+.header .header-content .hamburger-menu {
+  position: sticky;
+  top: 1rem;
+  left: 1rem;
+}
+.header .header-content .hamburger-menu .bar-top,
+.header .header-content .hamburger-menu .bar-middle,
+.header .header-content .hamburger-menu .bar-bottom {
   width: 1.5rem;
   height: 3px;
-  margin: 4px 0;
+  margin: 5px 0;
   border-radius: 5rem;
   background-color: grey;
   transform-origin: left;
   cursor: pointer;
   transition: var(--transition);
 }
-.header .header-content .theme-toggle .hamburger-menu .bar-top {
-  transform: rotate(45deg);
+.header .header-content .hamburger-menu .bar-top {
+  transform: rotate(45deg) translateY(-1px);
 }
-.header .header-content .theme-toggle .hamburger-menu .bar-middle {
-  transform: translateX(1rem);
+.header .header-content .hamburger-menu .bar-middle {
   opacity: 0;
 }
-.header .header-content .theme-toggle .hamburger-menu .bar-bottom {
-  transform: rotate(-45deg);
+.header .header-content .hamburger-menu .bar-bottom {
+  transform: rotate(-45deg) translateY(1px);
 }
-.header .header-content .theme-toggle .theme-toggle-btns {
-  border-radius: var(--border-radius);
-  background-color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .header-content .theme-toggle .theme-toggle-btns span {
-  width: 5rem;
-  padding: 0.2rem 0.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--secondary-color);
-  border-radius: 5rem;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-.header .header-content .theme-toggle .theme-toggle-btns span::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border-radius: 100rem;
-  background-color: white;
-  display: none;
-}
-.header .header-content .theme-toggle .bx {
-  font-size: 20px;
-  color: var(--color-white);
-}
-.header .header-content .theme-toggle .bxs-moon {
-  color: #101010;
-}
-.header .header-content .theme-toggle .bxs-sun {
-  color: #FFFF33;
-}
-.header .header-content .nav-bar li {
+.header .header-content .navbar li {
   list-style: none;
   margin-bottom: 1rem;
   padding: 0.3rem;
@@ -134,12 +131,16 @@ body {
   transition: var(--transition);
   color: red;
 }
-.header .header-content .nav-bar li a {
+.header .header-content .navbar li a {
   text-decoration: none;
   color: var(--color-white);
 }
-.header .header-content .nav-bar li:hover {
+.header .header-content .navbar li:hover {
   background-color: var(--secondary-color);
+}
+
+.open-navbar {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=styles.css.map */
