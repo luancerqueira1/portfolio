@@ -48,8 +48,10 @@ section {
   width: 100%;
 }
 
-body {
-  box-sizing: border-box;
+/*=====  HEADER =====*/
+.logo img {
+  width: 40px;
+  height: 30px;
 }
 
 .header-content {
@@ -60,22 +62,48 @@ body {
   width: 200px;
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
-  transition: all 1s ease-in-out;
+  transition: all 400ms ease-in-out;
+  padding: 1rem;
   z-index: 99;
   transform: translateX(100%);
 }
 
-.active {
+.header-content.active {
   transform: translateX(0);
-  transition: all 1s ease;
+  transition: transform 600ms ease;
 }
 
-.theme-toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem;
+/*===== MENU BUTTON =====*/
+.menu-btn.active .bar-top {
+  transform: rotate(45deg) translateY(-1px);
 }
+.menu-btn.active .bar-middle {
+  opacity: 0;
+}
+.menu-btn.active .bar-bottom {
+  transform: rotate(-45deg) translateY(1px);
+}
+
+.menu-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  z-index: 200;
+  transition: opacity 250ms ease;
+}
+.menu-btn .bar-top,
+.menu-btn .bar-middle,
+.menu-btn .bar-bottom {
+  width: 1.5rem;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 5rem;
+  background-color: grey;
+  transform-origin: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
 .theme-toggle .theme-toggle-btns {
   width: 5rem;
   padding: 0.2rem 0.4rem;
@@ -110,46 +138,8 @@ body {
   color: #FFFF33;
 }
 
-.menu-btn {
-  position: absolute;
-  top: 1rem;
-  right: 13rem;
-  z-index: 200;
-}
-.menu-btn .bar-top,
-.menu-btn .bar-middle,
-.menu-btn .bar-bottom {
-  width: 1.5rem;
-  height: 3px;
-  margin-bottom: 5px;
-  border-radius: 5rem;
-  background-color: grey;
-  transform-origin: left;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.menu-btn .bar-top .bar-top,
-.menu-btn .bar-middle .bar-top,
-.menu-btn .bar-bottom .bar-top {
-  transform: rotate(45deg) translateY(-1px);
-}
-.menu-btn .bar-top .bar-middle,
-.menu-btn .bar-middle .bar-middle,
-.menu-btn .bar-bottom .bar-middle {
-  opacity: 0;
-}
-.menu-btn .bar-top .bar-bottom,
-.menu-btn .bar-middle .bar-bottom,
-.menu-btn .bar-bottom .bar-bottom {
-  transform: rotate(-45deg) translateY(1px);
-}
-
-.active.menu-btn {
-  position: unset;
-}
-
 .navbar {
-  padding: 1rem;
+  margin-top: 1rem;
 }
 .navbar li {
   list-style: none;

@@ -1,8 +1,11 @@
 @use 'variables' as *;
 
-body {
-   box-sizing: border-box;
+/*=====  HEADER =====*/
+.logo img {
+width: 40px;
+height: 30px;
 }
+
 .header-content {
    position: fixed;
    top: 0;
@@ -11,31 +14,64 @@ body {
    width: 200px;
    background-color: var(--primary-color);
    box-shadow: var(--box-shadow);
-   transition: all 1s ease-in-out;
+   transition: all 400ms ease-in-out;
+   padding: 1rem;
    z-index: 99;
    transform: translateX(100%);
 }
 
-.active {
+// SHOW SIDEBAR WHEN ACTIVE
+.header-content.active {
    transform: translateX(0);
-   transition: all 1s ease;
+   transition: transform 600ms ease;
 }
 
+/*===== MENU BUTTON =====*/
+// SHOW SIDEBAR BTN X WHEN HEADER IS ACTIVE
+.menu-btn.active {
+
+   .bar-top {
+      transform: rotate(45deg) translateY(-1px);
+   }
+   .bar-middle {
+      opacity: 0;
+   }
+   .bar-bottom { 
+      transform: rotate(-45deg) translateY(1px);
+
+   }
+}
+
+.menu-btn {
+   position: absolute;
+   top: 1.2rem;
+   right: 1.4rem;
+   z-index: 200;
+   transition: opacity 250ms ease;
+
+
+   .bar-top,
+   .bar-middle,
+   .bar-bottom {
+      width: 1.5rem;
+      height: 3px;
+      margin-bottom: 5px;
+      border-radius: 5rem;
+      background-color: grey;
+      transform-origin: left;
+      cursor: pointer;
+      transition: var(--transition);
+   }
+}
 
 // THEME
 .theme-toggle {
-   display: flex;
-   justify-content: space-between;
-
-   align-items: center;
-   margin:1rem;
-
-   
 
    //THEME TOGGLE BTNS
    .theme-toggle-btns {
       width: 5rem;
       padding: .2rem .4rem;
+   
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -73,51 +109,11 @@ body {
    } 
 }
  
-//MENU BUTTON
-.menu-btn {
-   position: absolute;
-   top: 1rem;
-   right: 13rem;
-   z-index: 200;
-
- 
-   .bar-top,
-   .bar-middle,
-   .bar-bottom {
-      width: 1.5rem;
-      height: 3px;
-      margin-bottom: 5px ;
-      border-radius: 5rem;
-      background-color: grey;
-      transform-origin: left;
-      cursor: pointer;
-      transition: var(--transition);
-
-
-
-      .bar-top {
-            transform: rotate(45deg) translateY(-1px);
-      
-         }
-      
-      .bar-middle {
-         opacity: 0;
-      }
-   
-      .bar-bottom {
-         transform: rotate(-45deg) translateY(1px);
-   
-      }
-         
-   }
-}
-.active.menu-btn {
-   position: unset;
-}
 
 // NAVBAR LINKS
 .navbar  {
-   padding: 1rem;
+   margin-top: 1rem;
+
    li {
       list-style: none;
       margin-bottom: 1rem;
