@@ -9,18 +9,19 @@ menuBtn.onclick = () => {
    menuBtn.classList.toggle('active');
 }
 
-// THEME BTNS
-const darkMode = document.querySelector('.dark-mode');
-const lightMode = document.querySelector('.light-mode');
-const themeBtn = document.querySelector('.toogle-theme-btn');
+// SWITCH themeBtn
+const darkMode = document.querySelector('.dark-mode-btn');
+const lightMode = document.querySelector('.light-mode-btn');
+const themeBtn = document.querySelector('.switch-theme-span');
 
 darkMode.onclick = () => {
-   themeBtn.classList.add('active');
+   themeBtn.classList.add('light-mode-active');
+   themeBtn.classList.remove('dark-mode-active');
 };
 
 lightMode.onclick = () => {
-   console.log('uef');
-   themeBtn.classList.remove('active');
+   themeBtn.classList.remove('light-mode-active');
+   themeBtn.classList.add('dark-mode-active');
 };
 
 // ADD ACTIVE CLASS IN SELECTED TAB

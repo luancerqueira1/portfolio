@@ -86,55 +86,84 @@
 }
 
 /*===== THEME =====*/ 
+
 .theme-toggle {
-
-   //THEME TOGGLE BTNS
-   .theme-toggle-btns {
-      width: 5rem;
-      padding: .2rem .4rem;
-   
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      background-color: var(--secondary-color);
-      border-radius: 100rem;
-      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.100);
-      position: relative;
-      transition: all 1s linear;
-      cursor: pointer;
-
-      .toogle-theme-btn{
-         position: absolute;
-         height:100%;
-         width: 50%;
-         right: 0;
-         border-radius: 100rem;
-         background-color: rgb(243, 11, 11);
-         transition: all 1s linear;
-
-         &.active {
-            left: 0;
-            transition: all 1s linear;
-         }
-      }
-
-      //TOGGLE BTNS ICONS
-      .material-symbols-rounded {
-         font-size: 20px;
-         color: var(--color-white);
-      }
-
-      .dark-mode {
-         color: #1f1d1d;
-         
-      }
-
-      .light-mode {
-         color: #FFFF33;
-      }
-   } 
+   display: inline-block;
 }
- 
+
+.theme-switch {
+   position: relative;
+   background-color: var(--secondary-color);
+   border-radius: 100rem;
+   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.100);
+   transition: all 300ms linear;
+
+}
+
+.theme-switch-btns {
+   display: flex;
+   align-items: center;
+   border-radius: 100rem;
+   transition: all 300ms linear;
+}
+
+.switch-theme-span {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   width: 50%;
+   border-radius: 100rem;
+   background-color: rgba(255, 255, 255, 0.979);
+   box-shadow: 
+   12px 0 15px -4px rgb(0, 0, 0, 0.300),
+   -10px 0 8px -6px rgba(0, 0, 0, 0.304);
+}
+
+
+// BTNS ICONS
+.theme-btn{
+   border-radius: 100rem;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: .2rem .6rem;
+   cursor: pointer;
+   user-select: none;
+}
+
+.dark-mode-btn{
+   width:100%; 
+}
+.light-mode-btn{
+   width:100%; 
+}
+
+.light-mode-active{
+   transition: all 300ms linear;
+   transform: translateX(-100%);
+
+}
+.dark-mode-active{
+   transition: all 300ms linear;
+   transform: translateX(0);
+
+}
+
+.material-symbols-rounded {
+   font-size: 20px;
+}
+
+.dark-mode-icon {
+   color: #1f1d1d;
+   
+}
+
+.light-mode-icon {
+   color: #FFFF33;
+}
+
+
 
 // NAVBAR LINKS
 .navbar-link.nav-link-active {
