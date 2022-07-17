@@ -11,8 +11,9 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-   <!-- Icons -->
-   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <!-- GOOGLE ICONS -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,-25" />
+   <!-- js -->
    <script src="js/app.js" defer></script>
 </head>
 <body>
@@ -22,37 +23,45 @@
    </a> -->
 
 <!-- HEADER -->
-   <header class="header">
+   <header class="header ">
+      <div class="container">
       <!-- LOGO -->
-      <div class="logo">
-         <!-- <a href="#home">Luan Cerqueira</a> -->
-         <!-- <img src="/img/logo.png" alt=""> -->
-      </div>
-      <!-- HAMBURGER ICON -->
-      <div class="menu-btn">
-         <div class="bar-top"></div>
-         <div class="bar-middle"></div>
-         <div class="bar-bottom"></div>
-      </div>
-      <div class="header-content " id="header-content">
-         <!-- THEME AND CLOSE BTN -->
-         <div class="theme-toggle">
-            <!-- THEME BUTTONS-->
-            <div class="theme-switch">
-               <span class="theme-toggle-btns">
-                  <i class='bx bxs-moon'></i>
-                  <i class='bx bxs-sun'></i>
-               </span>
-            </div>
-         <!-- NAVBAR -->
-         <nav class="navbar">
-            <ul>
-               <li class="navbar-link"><a href="#Home">Home</a></li>
-               <li class="navbar-link"><a href="#about">About Me</a></li>
-               <li class="navbar-link"><a href="#projects">Pojects</a></li>
-               <li class="navbar-link"><a href="#contact">Contact</a></li>
-            </ul>
-         </nav>
+         <div class="logo">
+            <a href="#home" class="logo-title">Luan Cerqueira</a>
+            <!-- <img src="/img/logo.png" alt=""> -->
+         </div>
+         <!-- HAMBURGER ICON -->
+         <div class="menu-btn">
+            <div class="bar-top"></div>
+            <div class="bar-middle"></div>
+            <div class="bar-bottom"></div>
+         </div>
+         <div class="nav-content " id="header-content">
+            <!-- THEME AND CLOSE BTN -->
+            <div class="theme-toggle">
+               <!-- THEME BUTTONS-->
+               <div class="theme-switch">
+                  <div class="theme-toggle-btns">
+                     <span class="material-symbols-rounded dark-mode">
+                        dark_mode
+                     </span>
+                     <span class="material-symbols-rounded light-mode">
+                        light_mode
+                     </span>
+                     <span class="toogle-theme-btn "></span>
+                  </div>
+               </div>
+            </div>   
+            <!-- NAVBAR -->
+            <nav class="navbar">
+               <ul>
+                  <li class="navbar-link nav-link-active" ><a href="#Home">Home</a></li>
+                  <li class="navbar-link"><a href="#about">About Me</a></li>
+                  <li class="navbar-link"><a href="#projects">Pojects</a></li>
+                  <li class="navbar-link"><a href="#contact">Contact</a></li>
+               </ul>
+            </nav>
+        </div>
       </div>
    </header>
 
