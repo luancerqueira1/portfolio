@@ -6,15 +6,18 @@
    box-sizing: border-box;
    scroll-margin-top: 2rem;
    scroll-behavior: smooth;
+   transition: all 300ms ease;
+   
 }
 
 body {
    background-color: var(--color-background);
-   color: var(--color-white);
+   color: var(--font-color) ;
    font-family: var(--font-primary);
 }
 
 a {
+   color: var(--font-color);
    text-decoration: none;
 }
 
