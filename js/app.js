@@ -9,6 +9,11 @@ menuBtn.onclick = () => {
    menuBtn.classList.toggle('active');
 }
 
+window.onscroll = () => {
+   header.classList.remove('active');
+   menuBtn.classList.remove('active');
+}
+
 // SWITCH THEME BTN
 const darkMode = document.querySelector('.dark-mode-btn');
 const lightMode = document.querySelector('.light-mode-btn');
