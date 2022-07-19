@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.aboutme-content {
+   border: 1px solid rgb(45, 223, 9);
+}
+.aboutme-avatar{
+   margin-bottom: 2rem;
+}
+
+.technologies{
+   order: 1;
+}
+
+.avatar-img {
+   width: 100px;
+   display: block;
+   margin: 0 auto;
+   
+}
+
+.aboutme-info {
+   max-width: 800px;
+
+   margin: 0 auto;
+}
+
+.info-text {
+   max-width: 40rem;
+   padding: 0 1rem;
+   margin: 0 auto;
+
+   p {
+      margin-top: 1rem;
+   }
+}
+

@@ -5,7 +5,7 @@
    padding: 0;
    box-sizing: border-box;
    scroll-behavior: smooth;
-   scroll-margin-top: 4rem;  
+   scroll-margin-top: 5rem;  
 }
 
 body {
@@ -29,9 +29,9 @@ li {
 }
 
 section {
-   margin: 4rem 0 5rem;
+   margin: 5rem 0 5rem;
    
-   border:  2px solid red;
+   // border:  2px solid red;
 }
 
 .section__title {
@@ -42,8 +42,8 @@ section {
 }
 
 .container {
-   width: 95%;
+   width: 90%;
    max-width: 1024px;
    margin-inline: auto;
-   // border: 1px solid red;
+   border: 1px solid red;
 }
