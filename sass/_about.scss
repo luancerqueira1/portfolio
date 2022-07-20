@@ -1,14 +1,10 @@
 @use 'variables' as *;
 
-// .aboutme-content {
-//    // border: 1px solid rgb(45, 223, 9);
-// }
 
 .aboutme-info {
    max-width: 40rem;
    width: 100%;
    margin: 0 auto;
-   padding: 1rem 0;
    // border: 2px solid rgb(197, 12, 166);
 }
 
@@ -22,7 +18,7 @@
    justify-content: center;
    align-items: center;
    background-color: lightblue;
-   box-shadow: var(--box-shadow);
+   box-shadow:  0px 5px 15px var(--dark-color);
 }
 
 
@@ -39,44 +35,82 @@
 
    p {
       text-align: center;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
    }
 }
 
 .info-text h3 {
    text-align: center;
-   margin: 1rem 0;
+   margin: 1.5rem 0 1rem;
    display: flex;
    justify-content: center;
    font-weight: 900;
    position: relative;
    color: var(--secondary-color);
 
-   &::before {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      top: 50%;
-      // transform: translate(-120%,50%);
-      background-color: rgb(41, 209, 201);
-   }
+   // &::before {
+   //    content: '';
+   //    position: absolute;
+   //    width: 20px;
+   //    height: 2px;
+   //    top: 50%;
+   //    // transform: translate(-120%,50%);
+   //    background-color: rgb(41, 209, 201);
+   // }
 
-   &::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 2px;
-      top: 50%;
-      right: 0;
-      // transform: translate(20%, 50%);
-      background-color: red;
-   }
+   // &::after {
+   //    content: '';
+   //    position: absolute;
+   //    width: 20px;
+   //    height: 2px;
+   //    top: 50%;
+   //    right: 0;
+   //    // transform: translate(20%, 50%);
+   //    background-color: red;
+   // }
 }
 
-
+.info-text-color {
+   font-weight: 900;
+   color: var(--secondary-color);
+}
 
 .socials {
    max-width: 40rem;
-   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 2rem 0 0;
+}
+
+.socials .social-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   padding: 1.2rem;
+   margin-left: 1rem;
+   cursor: pointer;
+   transition: var(--transition);
+   box-shadow: var(--box-shadow);
+   background-color: var(--secondary-color);
+   border: .1rem solid var(--dark-color-variant);
+}
+
+.socials .social-link-icon{
+   font-size: 20px;
+   color: var(--primary-color);
+}
+
+.socials .social-link:hover {
+   transform: scale(1.1);
+   background-color: transparent;
+   color: var(--secondary-color);
+   border-color: var(--secondary-color);
+}
+
+.socials .social-link:hover .social-link-icon{
+   color: var(--secondary-color);
 }
