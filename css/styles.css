@@ -38,6 +38,7 @@ body {
   color: var(--font-color);
   font-family: var(--font-primary);
   transition: all 300ms ease-in-out;
+  font-size: 0.9rem;
 }
 
 img {
@@ -62,13 +63,13 @@ section {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 900;
+  color: var(--dark-color-variant);
 }
 
 .container {
   width: 90%;
   max-width: 1024px;
   margin-inline: auto;
-  border: 1px solid red;
 }
 
 /*=====  HEADER =====*/
@@ -188,7 +189,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0.2rem 0.6rem;
+  padding: 0.24rem 0.7rem;
   cursor: pointer;
   user-select: none;
   z-index: 200;
@@ -212,7 +213,7 @@ section {
   transform: translateX(0);
 }
 
-.material-symbols-rounded {
+.theme-icon {
   z-index: 400;
   font-size: 20px;
 }
@@ -296,36 +297,71 @@ section {
     transition: all 300ms ease;
   }
 }
-.aboutme-content {
-  border: 1px solid #2ddf09;
+.aboutme-info {
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .aboutme-avatar {
-  margin-bottom: 2rem;
-}
-
-.technologies {
-  order: 1;
+  width: 100%;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  box-shadow: var(--box-shadow);
 }
 
 .avatar-img {
-  width: 100px;
-  display: block;
-  margin: 0 auto;
-}
-
-.aboutme-info {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
 }
 
 .info-text {
   max-width: 40rem;
-  padding: 0 1rem;
   margin: 0 auto;
 }
 .info-text p {
+  text-align: center;
   margin-top: 1rem;
+}
+
+.info-text h3 {
+  text-align: center;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  position: relative;
+  color: var(--secondary-color);
+}
+.info-text h3::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  background-color: #29d1c9;
+}
+.info-text h3::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  right: 0;
+  background-color: red;
+}
+
+.socials {
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

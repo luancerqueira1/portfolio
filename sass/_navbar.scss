@@ -134,7 +134,7 @@
    display: flex;
    justify-content: space-evenly;
    align-items: center;
-   padding: .2rem .6rem;
+   padding: .24rem .7rem;
    cursor: pointer;
    user-select: none;
    z-index: 200;
@@ -160,10 +160,9 @@
 
 }
 
-.material-symbols-rounded {
+.theme-icon {
    z-index: 400;
    font-size: 20px;
-   
 }
 
 .dark-mode-icon {

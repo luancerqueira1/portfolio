@@ -1,36 +1,82 @@
 @use 'variables' as *;
 
-.aboutme-content {
-   border: 1px solid rgb(45, 223, 9);
-}
-.aboutme-avatar{
-   margin-bottom: 2rem;
-}
-
-.technologies{
-   order: 1;
-}
-
-.avatar-img {
-   width: 100px;
-   display: block;
-   margin: 0 auto;
-   
-}
+// .aboutme-content {
+//    // border: 1px solid rgb(45, 223, 9);
+// }
 
 .aboutme-info {
-   max-width: 800px;
-
+   max-width: 40rem;
+   width: 100%;
    margin: 0 auto;
+   padding: 1rem 0;
+   // border: 2px solid rgb(197, 12, 166);
+}
+
+.aboutme-avatar{
+   width: 100%;
+   margin: 0 auto;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: lightblue;
+   box-shadow: var(--box-shadow);
+}
+
+
+.avatar-img {
+   width: 105px;
+   height: 105px;
+   object-fit: cover;
+   // border-radius: 50%;
 }
 
 .info-text {
    max-width: 40rem;
-   padding: 0 1rem;
    margin: 0 auto;
 
    p {
+      text-align: center;
       margin-top: 1rem;
    }
 }
 
+.info-text h3 {
+   text-align: center;
+   margin: 1rem 0;
+   display: flex;
+   justify-content: center;
+   font-weight: 900;
+   position: relative;
+   color: var(--secondary-color);
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      top: 50%;
+      // transform: translate(-120%,50%);
+      background-color: rgb(41, 209, 201);
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      top: 50%;
+      right: 0;
+      // transform: translate(20%, 50%);
+      background-color: red;
+   }
+}
+
+
+
+.socials {
+   max-width: 40rem;
+   margin: 0 auto;
+}
