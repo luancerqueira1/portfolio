@@ -2,27 +2,40 @@
 
 
 .projects-content {
-   // border: 2px solid red;
    display: grid;
+   // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    gap: 2rem;
 }
 
-.project {
-   height: 10rem;
-   // border: 2px solid var(--dark-color-variant);
-   border: 2px solid red;
+.project-box{
+   position: relative;
+   width: 100%;
+   height: 15rem;
+   border: 2px solid var(--dark-color-variant);
+   border-radius: 1rem;
    overflow: hidden;
-   border-radius: 10px;
+}
+
+.project-img{
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   user-select: none;
+}
+
+.project-overlay {
+   position: absolute;
+   text-align: center;
+   padding: 1rem;
+   inset: 0;
+   opacity: 70%;
+   transform: translateY(-100%);
+   transition: transform 200ms;
+   background-color:var(--dark-color-variant);
 
 }
 
-.project-img {
-   border: 2px solid green;
-
-   img {
-      border: 3px solid black;
-      object-fit: cover;
-   }
-
-
+.project-box:hover .project-overlay {
+   transition: var(--transition);
+   transform: translateY(0);
 }
