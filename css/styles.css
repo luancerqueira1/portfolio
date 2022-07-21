@@ -18,9 +18,9 @@
   --primary-color: #ffffff;
   --secondary-color: #0ea2f6;
   --light-color:#848bc82e;
-  --font-color: #464343;
-  --dark-color: #0000002c;
+  --dark-color: hsla(0, 2%, 30%, 0.226);
   --dark-color-variant: grey;
+  --font-color: #464343;
   --box-shadow: 0 2rem 3rem var(--light-color);
 }
 
@@ -371,7 +371,7 @@ section {
   margin: 2rem 0 0;
 }
 
-.socials .social-link {
+.social-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,19 +387,19 @@ section {
   border: 0.1rem solid var(--dark-color-variant);
 }
 
-.socials .social-link-icon {
+.social-link-icon {
   font-size: 20px;
   color: var(--primary-color);
 }
 
-.socials .social-link:hover {
+.social-link:hover {
   transform: scale(1.1);
   background-color: transparent;
   color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.socials .social-link:hover .social-link-icon {
+.social-link:hover .social-link-icon {
   color: var(--secondary-color);
 }
 
@@ -408,6 +408,7 @@ section {
   gap: 2rem;
 }
 
+/*===== PROJECT BOX =====*/
 .project-box {
   position: relative;
   width: 100%;
@@ -424,20 +425,54 @@ section {
   user-select: none;
 }
 
+/*===== OVERLAY =====*/
 .project-overlay {
   position: absolute;
   text-align: center;
-  padding: 1rem;
   inset: 0;
-  opacity: 70%;
-  transform: translateY(-100%);
+  opacity: 80%;
   transition: transform 200ms;
-  background-color: var(--dark-color-variant);
+  color: var(--font-color);
+  background-color: var(--dark-color);
 }
 
 .project-box:hover .project-overlay {
   transition: var(--transition);
   transform: translateY(0);
+}
+
+.project-overlay-title {
+  margin: 1rem;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--dark-color-variant);
+}
+
+.project-link {
+  margin-inline: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  border: 0.1rem solid var(--dark-color-variant);
+}
+
+.project-link-icon {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
