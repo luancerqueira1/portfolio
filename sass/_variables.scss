@@ -4,9 +4,9 @@
    --primary-color: #202528;
    --secondary-color: #4285f4;
 
-
-   --dark-color:  #0000002c;
-   --dark-color-variant:  rgb(77, 74, 74);
+   --dark-color: #222429;
+   --dark-color-2:  rgb(77, 74, 74);
+   --dark-color-shadow:  rgba(0, 0, 0, 0.200);
    --light-color: #edeffd;
 
    --font-color: #f5f6ff;
@@ -15,7 +15,7 @@
 
    --transition: all 300ms linear;
 
-   --box-shadow: 0 1rem 1rem var(--dark-color);   
+   --box-shadow: 0 1rem 1rem var(--dark-color-shadow);   
 
    --border-radius: 5px;
  
@@ -27,10 +27,10 @@
    --primary-color: #ffffff;
    --secondary-color: #0ea2f6; 
 
+   --dark-color: rgb(223, 221, 221);
+   --dark-color-2: grey;
    --light-color:#848bc82e;
    
-   --dark-color: hsla(0, 2%, 30%, 0.226);
-   --dark-color-variant: grey;
    --font-color: #464343;
 
    --box-shadow: 0 2rem 3rem var(--light-color);
