@@ -406,54 +406,41 @@ section {
 
 .projects-content {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /*===== PROJECT BOX =====*/
 .project-box {
   position: relative;
   width: 100%;
-  height: 15rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.box-img {
+  height: 14rem;
   border-radius: 1rem;
   border: 2px solid var(--dark-color-2);
   overflow: hidden;
 }
 
 .project-img {
-  height: 100%;
   object-fit: cover;
   object-position: center;
   user-select: none;
+  height: 100%;
 }
 
-/*===== OVERLAY =====*/
-.project-overlay {
-  position: absolute;
-  text-align: center;
-  inset: 0;
-  opacity: 90%;
-  transform: translateY(-100%);
-  transition: transform 200ms;
-  color: var(--font-color);
-  background-color: var(--dark-color);
-  padding: 0 1rem;
-  overflow: hidden;
-}
-
-.project-box:hover .project-overlay {
-  transition: var(--transition);
-  transform: translateY(0);
-}
-
-.project-overlay-title {
-  margin: 1rem;
-}
-
-/*=== OVERLAY PROJECTS LINKS */
 .project-info {
   text-align: center;
 }
 
+.project-overlay-title {
+  display: none;
+}
+
+/*=== PROJECTS LINKS */
 .project-links {
   display: flex;
   justify-content: center;
@@ -461,10 +448,6 @@ section {
   gap: 2rem;
   width: 100%;
   padding: 0.3rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: var(--color-background);
   box-shadow: var(--box-shadow);
 }
@@ -477,11 +460,9 @@ section {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  padding: 0.5rem;
   cursor: pointer;
-  color: var(--dark-color-2);
+  color: var(--font-color);
   transition: var(--transition);
-  box-shadow: var(--box-shadow);
   padding: 1rem;
 }
 
@@ -501,7 +482,7 @@ section {
   }
 }
 .project-link-icon {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--font-color);
   transition: var(--transition);
 }
@@ -510,6 +491,39 @@ section {
 @media (min-width: 768px) {
   .projects-content {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  /*===== OVERLAY =====*/
+  .project-overlay {
+    position: absolute;
+    text-align: center;
+    inset: 0;
+    opacity: 90%;
+    transform: translateY(-100%);
+    transition: transform 200ms;
+    padding: 0 1rem;
+    overflow: hidden;
+    color: var(--font-color);
+    background-color: var(--dark-color);
+  }
+
+  .project-box:hover .project-overlay {
+    transition: var(--transition);
+    transform: translateY(0);
+  }
+
+  .project-overlay-title {
+    display: block;
+    margin: 1rem;
+  }
+
+  /*=== OVERLAY PROJECTS LINKS */
+  .project-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
