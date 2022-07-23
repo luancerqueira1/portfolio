@@ -47,28 +47,65 @@ navLink.forEach((link) => {
 });
 
 /*===== EMAIL JS =====*/
-function validate(e) {
-   const name = document.querySelector('.name');
-   const email = document.querySelector('.email');
-   const message = document.querySelector('.message');
-   const sendBtn = document.querySelector('.send-btn');
 
-   sendBtn.onclick = (e) => {
+function validate(e) {
+   let name = document.querySelector('.form-name');
+   let email = document.querySelector('.form-email');
+   let message = document.querySelector('.form-message');
+   let sendBtn = document.querySelector('.send-btn');
+
+   sendBtn.onclick = ((e) => {
       e.preventDefault();
 
-      if (name.value === '' || email.value === '' || message.value === '' ) {
+      if (name.value == "" || email.value == "" || message.value == "" ) {
          messageError();
       }
       else {
+         console.log('oiiiii');
          success();
       }
+   })
+}
+validate();
+
+// POPUP ERROR
+const messageError = () => {
+   const poupupError = document.createElement('div');
+   
+   poupupError.classList.add('popup-error');
+   document.body.appendChild(poupupError);
+
+   showPopup(); 
+};
+// POPUP SUCCESS
+const success = () => {
+   const poupupSuccess = document.createElement('div');
+   
+   poupupSuccess.classList.add('popup-success');
+   document.body.appendChild(poupupSuccess);
+
+   showPopup(); 
+};
+
+/*===== POPUP =====*/
+function showPopup() {
+   const poupupBg = document.createElement('div');
+   const poupup = document.createElement('div');
+
+   // POPUP BACKGROUNG
+
+   poupupBg.classList.add('popup-background');
+   document.body.appendChild(poupupBg);
+   poupupBg.onclick = () => {
+      poupupBg.classList.remove('popup-background');
+      poupup.classList.remove('popup');
    }
+   // POPUP
+   poupup.classList.add('popup');
+   document.body.appendChild(poupup);
 }
 
-const messageError = () => {
-   
-}
-const success = () => {};
+
 
 
 

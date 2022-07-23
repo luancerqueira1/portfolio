@@ -65,7 +65,37 @@
    box-shadow: var(--box-shadow);
 }
 
-/*===== ERROR POUPUP =====*/
-/*===== SUCCESS POUPUP =====*/
+/*===== POUPUP =====*/
+.popup-background {
+   position: fixed;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   opacity: 70%;
+   z-index: 400;
+   background-color: var(--dark-color-2);
+}
 
+.popup {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 1rem;
+   margin: 1rem;
+   max-width: 30rem;
+   max-height: 20rem;
+   border-radius: 10px;
+   z-index: 500;
+   background-color: white;
+}
+
+// /*===== SUCCESS POUPUP =====*/
+// .popup-error {}
+
+// /*===== ERROR POUPUP =====*/
+// .popup-success {
+
+// }
 
