@@ -17,7 +17,7 @@
 }
 
 .box-img {
-   height: 14rem;
+   height: 12rem;
    border-radius: 1rem;
    border: 2px solid var(--dark-color-2);
    overflow: hidden;
@@ -97,6 +97,10 @@
 }
 
 @media(min-width:$breakpoint-lg){
+   .box-img {
+      height: 16rem;
+   }
+
    /*===== OVERLAY =====*/
    .project-overlay {
       position: absolute;

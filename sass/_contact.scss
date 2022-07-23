@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+
+.contact-form {
+   max-width: 35rem;
+   margin-inline: auto;
+}
+
+// #form {
+//    border: 2px solid pink;
+// }
+
+/*===== LABEL=====*/
+.label-name,
+.label-email,
+.label-message{
+   display: block;
+   color: var(--font-color);
+   font-weight: 600;
+   text-align: center;
+   margin: 1rem;
+}
+
+/*===== INPUT =====*/
+.field {
+   margin-bottom: 2rem;
+}
+
+.form-name,
+.form-email,
+.form-message{
+   width: 100%;
+   border: none;
+   border-radius: 5px;
+   padding: .5rem;
+   font-weight: 600;
+   color: var(--font-color);
+   background-color: var(--dark-color);
+   box-shadow: var(--box-shadow);
+}
+
+.form-name,
+.form-email{
+   height: 2.5rem;
+}
+
+.form-message {
+   height: 15rem;
+}
+
+.form-name:focus,
+.form-email:focus,
+.form-message:focus {
+   outline-color: var(--dark-color-2);
+   border: 2px solid var(--dark-color-2);
+}
+
+.send-btn {
+   border: none;
+   padding: 1rem;
+   border-radius: 5px;
+   color: var(--font-color);
+   font-weight: 600;
+   background-color: var(--dark-color);
+   box-shadow: var(--box-shadow);
+}
+
+/*===== ERROR POUPUP =====*/
+/*===== SUCCESS POUPUP =====*/
+
+

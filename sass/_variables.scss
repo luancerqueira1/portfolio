@@ -18,7 +18,6 @@
    --box-shadow: 0 1rem 1rem var(--dark-color-shadow);   
 
    --border-radius: 5px;
- 
 }
 
 /*===== LIGHT THEME =====*/
@@ -27,13 +26,13 @@
    --primary-color: #ffffff;
    --secondary-color: #0ea2f6; 
 
-   --dark-color: rgb(223, 221, 221);
+   --dark-color: rgb(221, 221, 223);
    --dark-color-2: grey;
    --light-color:#848bc82e;
    
    --font-color: #464343;
 
-   --box-shadow: 0 2rem 3rem var(--light-color);
+   --box-shadow: 0 1rem 1rem var(--light-color);
 }
 
 /*===== MEDIA QUERIES VARIABLES =====*/

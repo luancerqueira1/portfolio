@@ -155,9 +155,9 @@
          <!-- END of PROJECT -->
          <!-- PROJECT -->
         <div class="project-box">
-         <div class="box-img">
-            <img class="project-img" src="img/portfolio1.jpg" alt="">
-         </div>
+            <div class="box-img">
+               <img class="project-img" src="img/portfolio1.jpg" alt="">
+            </div>
             <div class="project-overlay">
                <div class="project-info">
                   <h3 class="project-overlay-title">TITULO</h3>
@@ -176,9 +176,9 @@
          <!-- END of PROJECT -->
          <!-- PROJECT -->
         <div class="project-box">
-         <div class="box-img">
-            <img class="project-img" src="img/portfolio1.jpg" alt="">
-         </div>
+            <div class="box-img">
+               <img class="project-img" src="img/portfolio1.jpg" alt="">
+            </div>
             <div class="project-overlay">
                <div class="project-info">
                   <h3 class="project-overlay-title">TITULO</h3>
@@ -190,23 +190,39 @@
                         <i class="ri-github-fill project-link-icon"></i>
                      </a>
                   </div>
-              
                </div>
             </div>
         </div>
          <!-- END of PROJECT -->
-        
       </div>
    </section>
-
 
 <!--======== CONTACT ======== -->
    <section class="contact" id="contact">
       <h1 class="section__title">Contato</h1>
       <div class="contact-content container">
+         <form id="form" class="contact-form">
+            <div class="field">
+               <label for="from_name" class="label-name">from_name - seu nome </label>
+               <input type="text" name="from_name" id="from_name" class="form-name" required>
+            </div>
+            <div class="field">
+               <label for="from_email" class="label-email">seu email </label>
+               <input type="email" name="from_email" id="from_email" class="form-email" required>
+            </div>
+            <div class="field">
+               <label for="message" class="label-message">message - sua mensagem </label>
+               <textarea name="message" id="message"class="form-message"></textarea>
+            </div>
          
+            <input type="submit" id="button" value="Send Email" class="send-btn">
+         </form>
       </div>
    </section>
+
+
+
+
 
    <footer class="footer">
       <div class="footer-content container">
@@ -214,5 +230,12 @@
       </div>
    </footer>
 
+
+   <!-- EMAIL JS -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   
+   <script type="text/javascript">
+      emailjs.init('AU33YltTXcZ6LKXVp')
+   </script>
 </body>
 </html>

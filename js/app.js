@@ -33,7 +33,7 @@ lightMode.onclick = () => {
    document.body.classList.add('light-theme');
 };
 
-// ADD ACTIVE CLASS IN SELECTED TAB
+/*===== ADD ACTIVE CLASS IN SELECTED TAB =====*/ 
 const navLink = document.querySelectorAll('.navbar-link');
 function activeLink () {
    navLink.forEach((link) => {
@@ -45,6 +45,30 @@ function activeLink () {
 navLink.forEach((link) => {
    link.addEventListener('click', activeLink);
 });
+
+/*===== EMAIL JS =====*/
+function validate(e) {
+   const name = document.querySelector('.name');
+   const email = document.querySelector('.email');
+   const message = document.querySelector('.message');
+   const sendBtn = document.querySelector('.send-btn');
+
+   sendBtn.onclick = (e) => {
+      e.preventDefault();
+
+      if (name.value === '' || email.value === '' || message.value === '' ) {
+         messageError();
+      }
+      else {
+         success();
+      }
+   }
+}
+
+const messageError = () => {
+   
+}
+const success = () => {};
 
 
 
