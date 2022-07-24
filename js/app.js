@@ -62,6 +62,7 @@ function validate(e) {
       }
       else {
          success();
+         showPopup();
       }
    })
 }
@@ -73,21 +74,18 @@ const popup = document.createElement('div');
 
 function showPopup() {
    // POPUP BACKGROUNG
-   popupBg.classList.add('popup-background');
    document.body.appendChild(popupBg);
+   popupBg.classList.add('popup-background');
    
    // POPUP
+   popupBg.appendChild(popup);
    popup.classList.add('popup');
-   document.body.appendChild(popup);
 }
 
 function hidePopup(el) {
-   el.forEach(coisa => {
-      coisa.onclick = () => {
-         popupBg.classList.remove('popup-background');
-         popup.classList.remove('popup');
-      }
-   })
+   popupBg.onclick = () => {
+      document.body.removeChild(popupBg);
+   };
 }
 
 // POPUP ERROR
@@ -103,7 +101,13 @@ const messageError = () => {
 
 // POPUP SUCCESS
 const success = () => {
+   showPopup();
+
+   popup.innerHTML = `
+   <span><i class="ri-alert-line"></i></span>
    
+   <p>success</p>
+   <button onclick=${hidePopup(popupBg)}>ok</button>`; 
 };
 
 

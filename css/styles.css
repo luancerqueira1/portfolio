@@ -588,11 +588,10 @@ textarea {
   border: none;
   padding: 1rem;
   border-radius: 5px;
-  color: var(--font-color);
   font-weight: 600;
-  background-color: var(--dark-color-shadow);
-  box-shadow: var(--box-shadow);
   cursor: pointer;
+  color: var(--font-color);
+  background-color: var(--dark-color);
 }
 
 /*===== POUPUP =====*/
@@ -601,25 +600,26 @@ textarea {
   inset: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  opacity: 50%;
-  z-index: 400;
-  background-color: var(--dark-color-2);
+  z-index: 600;
+  background-color: var(--dark-color-shadow);
 }
 
 .popup {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem;
-  margin: 1rem;
-  max-width: 30rem;
+  width: 30rem;
   max-height: 20rem;
   border-radius: 10px;
-  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #181a1e;
   background-color: white;
-  color: black;
 }
 
 .popup-error {
