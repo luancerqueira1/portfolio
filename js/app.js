@@ -61,49 +61,52 @@ function validate(e) {
          messageError();
       }
       else {
-         console.log('oiiiii');
          success();
       }
    })
 }
 validate();
 
+/*===== POPUP =====*/
+const popupBg = document.createElement('div');
+const popup = document.createElement('div');
+
+function showPopup() {
+   // POPUP BACKGROUNG
+   popupBg.classList.add('popup-background');
+   document.body.appendChild(popupBg);
+   
+   // POPUP
+   popup.classList.add('popup');
+   document.body.appendChild(popup);
+}
+
+function hidePopup(el) {
+   el.forEach(coisa => {
+      coisa.onclick = () => {
+         popupBg.classList.remove('popup-background');
+         popup.classList.remove('popup');
+      }
+   })
+}
+
 // POPUP ERROR
 const messageError = () => {
-   const poupupError = document.createElement('div');
-   
-   poupupError.classList.add('popup-error');
-   document.body.appendChild(poupupError);
+   showPopup();
 
-   showPopup(); 
+   popup.innerHTML = `
+   <span><i class="ri-alert-line"></i></span>
+   
+   <p>Preencha todos os campos</p>
+   <button onclick=${hidePopup(popupBg)}>ok</button>`; 
 };
+
 // POPUP SUCCESS
 const success = () => {
-   const poupupSuccess = document.createElement('div');
    
-   poupupSuccess.classList.add('popup-success');
-   document.body.appendChild(poupupSuccess);
-
-   showPopup(); 
 };
 
-/*===== POPUP =====*/
-function showPopup() {
-   const poupupBg = document.createElement('div');
-   const poupup = document.createElement('div');
 
-   // POPUP BACKGROUNG
-
-   poupupBg.classList.add('popup-background');
-   document.body.appendChild(poupupBg);
-   poupupBg.onclick = () => {
-      poupupBg.classList.remove('popup-background');
-      poupup.classList.remove('popup');
-   }
-   // POPUP
-   poupup.classList.add('popup');
-   document.body.appendChild(poupup);
-}
 
 
 

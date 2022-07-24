@@ -36,7 +36,6 @@
    font-weight: 600;
    color: var(--font-color);
    background-color: var(--dark-color);
-   box-shadow: var(--box-shadow);
 }
 
 .form-name,
@@ -61,8 +60,9 @@
    border-radius: 5px;
    color: var(--font-color);
    font-weight: 600;
-   background-color: var(--dark-color);
+   background-color: var(--dark-color-shadow);
    box-shadow: var(--box-shadow);
+   cursor: pointer;
 }
 
 /*===== POUPUP =====*/
@@ -72,7 +72,7 @@
    width: 100%;
    height: 100%;
    border-radius: 10px;
-   opacity: 70%;
+   opacity: 50%;
    z-index: 400;
    background-color: var(--dark-color-2);
 }
@@ -89,12 +89,16 @@
    border-radius: 10px;
    z-index: 500;
    background-color: white;
+   color: black;
+}
+
+// /*===== ERROR POUPUP =====*/
+.popup-error {
+   color: red;
+   
 }
 
 // /*===== SUCCESS POUPUP =====*/
-// .popup-error {}
-
-// /*===== ERROR POUPUP =====*/
 // .popup-success {
 
 // }

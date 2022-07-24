@@ -7,10 +7,10 @@
   --dark-color-shadow: rgba(0, 0, 0, 0.200);
   --light-color: #edeffd;
   --font-color: #f5f6ff;
-  --font-primary: "Poppins", sans-serif;
-  --transition: all 300ms linear;
   --box-shadow: 0 1rem 1rem var(--dark-color-shadow);
+  --transition: all 300ms linear;
   --border-radius: 5px;
+  --font-primary: "Poppins", sans-serif;
 }
 
 /*===== LIGHT THEME =====*/
@@ -20,9 +20,10 @@
   --secondary-color: #0ea2f6;
   --dark-color: rgb(221, 221, 223);
   --dark-color-2: grey;
+  --dark-color-shadow: rgba(0, 0, 0, 0.100);
   --light-color:#848bc82e;
   --font-color: #464343;
-  --box-shadow: 0 1rem 1rem var(--light-color);
+  --box-shadow: 0 1rem 1rem var(--dark-color-shadow);
 }
 
 /*===== MEDIA QUERIES VARIABLES =====*/
@@ -565,7 +566,6 @@ textarea {
   font-weight: 600;
   color: var(--font-color);
   background-color: var(--dark-color);
-  box-shadow: var(--box-shadow);
 }
 
 .form-name,
@@ -590,8 +590,9 @@ textarea {
   border-radius: 5px;
   color: var(--font-color);
   font-weight: 600;
-  background-color: var(--dark-color);
+  background-color: var(--dark-color-shadow);
   box-shadow: var(--box-shadow);
+  cursor: pointer;
 }
 
 /*===== POUPUP =====*/
@@ -601,7 +602,7 @@ textarea {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  opacity: 70%;
+  opacity: 50%;
   z-index: 400;
   background-color: var(--dark-color-2);
 }
@@ -618,6 +619,11 @@ textarea {
   border-radius: 10px;
   z-index: 500;
   background-color: white;
+  color: black;
+}
+
+.popup-error {
+  color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */
