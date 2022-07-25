@@ -57,62 +57,50 @@ function validate(e) {
    sendBtn.onclick = ((e) => {
       e.preventDefault();
 
-      if (name.value == "" || email.value == "" || message.value == "" ) {
+      if (name.value == "" || email.value == "" || message.value == "") {
          messageError();
       }
       else {
          success();
-         showPopup();
       }
    })
 }
 validate();
 
 /*===== POPUP =====*/
-const popupBg = document.createElement('div');
-const popup = document.createElement('div');
+const popupBg = document.querySelector('.popup-background');
+const popup = document.querySelector('.popup');
+const btn = document.querySelector('.btn');
 
-function showPopup() {
-   // POPUP BACKGROUNG
-   document.body.appendChild(popupBg);
-   popupBg.classList.add('popup-background');
-   
-   // POPUP
-   popupBg.appendChild(popup);
-   popup.classList.add('popup');
-}
-
-function hidePopup(el) {
-   popupBg.onclick = () => {
-      document.body.removeChild(popupBg);
-   };
-}
 
 // POPUP ERROR
 const messageError = () => {
-   showPopup();
-
-   popup.innerHTML = `
+   console.log('iowf');
+   popupBg.classList.add('active');
+   popup.innerHTML += `
    <span><i class="ri-alert-line"></i></span>
-   
    <p>Preencha todos os campos</p>
-   <button onclick=${hidePopup(popupBg)}>ok</button>`; 
+   <button onclick="hidePopup()">ok</button>`;
 };
+  
 
 // POPUP SUCCESS
-const success = () => {
-   showPopup();
 
-   popup.innerHTML = `
-   <span><i class="ri-alert-line"></i></span>
-   
-   <p>success</p>
-   <button onclick=${hidePopup(popupBg)}>ok</button>`; 
+const success = () => {
+  
+   console.log('susss');
+   popupBg.classList.add('active');
+   popup.innerHTML += `
+   <i class="ri-check-line"></i>
+   <p>Sucesso</p>
+   <button onclick="hidePopup()">ok</button>`; 
 };
 
 
-
-
-
+function hidePopup() {
+   btn.onclick = () => {
+      popupBg.classList.remove('active');
+   };
+}
 
 
