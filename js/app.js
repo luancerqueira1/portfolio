@@ -47,8 +47,7 @@ navLink.forEach((link) => {
 });
 
 /*===== EMAIL JS =====*/
-
-function validate(e) {
+function validate() {
    let name = document.querySelector('.form-name');
    let email = document.querySelector('.form-email');
    let message = document.querySelector('.form-message');
@@ -61,46 +60,67 @@ function validate(e) {
          messageError();
       }
       else {
+         sendEmail(name.value,email.value,message.value);
          success();
       }
    })
 }
 validate();
 
+// ERROR
+const messageError = () => {
+   popupBg.classList.add('active');
+
+   popupIcon.innerHTML = '<i class="ri-error-warning-line error"></i>';
+   popupText.innerHTML = 'Preencha Todos Os Campos';
+   
+};
+  
+// SEND EMAIL
+function sendEmail(name,email,message) { 
+   emailjs.send('service_6m5agqf', 'template_3jyk46p', {
+      from_name: name,
+      to_name: email,
+      message: message,
+   });
+};
+
+// SUCCESS
+ const success = () => {
+   popupBg.classList.add('active');
+
+   popupIcon.innerHTML = '<i class="ri-check-line success"></i>';
+   popupText.innerHTML = 'Sua Menssagem Foi Enviada Com Sucesso';
+
+   clearInputFields();
+ };
+
+
 /*===== POPUP =====*/
 const popupBg = document.querySelector('.popup-background');
 const popup = document.querySelector('.popup');
-const btn = document.querySelector('.btn');
+
+const popupIcon = document.querySelector('.popup-icon');
+const popupText = document.querySelector('.popup-text');
+const popupBtn = document.querySelector('.popup-btn');
 
 
-// POPUP ERROR
-const messageError = () => {
-   console.log('iowf');
-   popupBg.classList.add('active');
-   popup.innerHTML += `
-   <span><i class="ri-alert-line"></i></span>
-   <p>Preencha todos os campos</p>
-   <button onclick="hidePopup()">ok</button>`;
-};
-  
-
-// POPUP SUCCESS
-
-const success = () => {
-  
-   console.log('susss');
-   popupBg.classList.add('active');
-   popup.innerHTML += `
-   <i class="ri-check-line"></i>
-   <p>Sucesso</p>
-   <button onclick="hidePopup()">ok</button>`; 
-};
-
-
-function hidePopup() {
-   btn.onclick = () => {
-      popupBg.classList.remove('active');
-   };
+popupBtn.onclick = () => {
+   popupBg.classList.remove('active');  
 }
+
+//CLEAR FIELDS WHEN MESSAGE SENT
+function clearInputFields() {
+   let name = document.querySelector('.form-name');
+   let email = document.querySelector('.form-email');
+   let message = document.querySelector('.form-message');
+
+   name.value = '';
+   email.value = '';
+   message.value = '';
+};
+
+
+
 
 
