@@ -1,8 +1,6 @@
 const menuBtn = document.querySelector('.menu-btn');
 const header = document.querySelector('.nav-content');
 
-// const navbar = document.querySelector('.navbar');
-
 // OPEN SIDEBAR MENU
 menuBtn.onclick = () => {
    header.classList.toggle('active');
@@ -52,49 +50,33 @@ function validate() {
    let email = document.querySelector('.form-email');
    let message = document.querySelector('.form-message');
    let sendBtn = document.querySelector('.send-btn');
+   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
    sendBtn.onclick = ((e) => {
       e.preventDefault();
 
-      if (name.value == "" || email.value == "" || message.value == "") {
-         messageError();
+      if (name.value == "" || email.value == "" || message.value == "" ) {
+         emptyError();
+      }
+      else if (!email.value.match(emailPattern)) {
+         invalidEmail();
       }
       else {
-         sendEmail(name.value,email.value,message.value);
+         sendEmail(name.value, email.value, message.value);
          success();
       }
    })
 }
 validate();
 
-// ERROR
-const messageError = () => {
-   popupBg.classList.add('active');
-
-   popupIcon.innerHTML = '<i class="ri-error-warning-line error"></i>';
-   popupText.innerHTML = 'Preencha Todos Os Campos';
-   
-};
-  
 // SEND EMAIL
-function sendEmail(name,email,message) { 
+function sendEmail(name, email, message) {
    emailjs.send('service_6m5agqf', 'template_3jyk46p', {
       from_name: name,
       to_name: email,
       message: message,
    });
-};
-
-// SUCCESS
- const success = () => {
-   popupBg.classList.add('active');
-
-   popupIcon.innerHTML = '<i class="ri-check-line success"></i>';
-   popupText.innerHTML = 'Sua Menssagem Foi Enviada Com Sucesso';
-
-   clearInputFields();
- };
-
+}
 
 /*===== POPUP =====*/
 const popupBg = document.querySelector('.popup-background');
@@ -104,7 +86,33 @@ const popupIcon = document.querySelector('.popup-icon');
 const popupText = document.querySelector('.popup-text');
 const popupBtn = document.querySelector('.popup-btn');
 
+// ERROR
+const emptyError = () => {
+   popupBg.classList.add('active');
 
+   popupIcon.innerHTML = '<i class="ri-error-warning-line error"></i>';
+   popupText.innerHTML = 'Preencha Todos Os Campos';
+};
+   
+// SUCCESS
+ const success = () => {
+   popupBg.classList.add('active');
+
+   popupIcon.innerHTML = '<i class="ri-check-line success"></i>';
+   popupText.innerHTML = 'Sua Menssagem Foi Enviada Com Sucesso';
+
+   clearInputFields();
+};
+ 
+// INVALID EMAIL 
+const invalidEmail = () => {
+   popupBg.classList.add('active');
+
+   popupIcon.innerHTML = '<i class="ri-error-warning-line error"></i>';
+   popupText.innerHTML = 'Email Invalido';
+};
+  
+// REMOVE POPUP
 popupBtn.onclick = () => {
    popupBg.classList.remove('active');  
 }
@@ -119,8 +127,4 @@ function clearInputFields() {
    email.value = '';
    message.value = '';
 };
-
-
-
-
 
