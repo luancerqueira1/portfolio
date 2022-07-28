@@ -78,6 +78,22 @@ textarea {
   margin-inline: auto;
 }
 
+/*===== SCROLLBAR =====*/
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--dark-color-2);
+  border: 0.3rem solid var(--primary-color);
+}
+
+/*===== LOADING ANIMATION =====*/
 /*=====  HEADER =====*/
 .header {
   position: fixed;
@@ -653,8 +669,15 @@ textarea {
   background-color: var(--secondary-color);
 }
 
-.popup-error {
-  color: red;
+.footer {
+  margin-bottom: 2rem;
+}
+
+.footer-info {
+  text-align: end;
+}
+.footer-info p {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */

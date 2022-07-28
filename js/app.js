@@ -128,3 +128,8 @@ function clearInputFields() {
    message.value = '';
 };
 
+// DATE
+const dateYear = new Date().getFullYear();
+const year = document.querySelector('.date');
+year.innerText = dateYear;
+

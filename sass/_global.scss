@@ -49,6 +49,21 @@ textarea {
    width: 90%;
    max-width: 1024px;
    margin-inline: auto;
-
-   // border: 1px solid red;
 }
+
+/*===== SCROLLBAR =====*/
+::-webkit-scrollbar {
+   width:1.3rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: var(--primary-color);  
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 1rem;
+   background-color: var(--dark-color-2);
+   border: .3rem solid var(--primary-color);
+}
+
+/*===== LOADING ANIMATION =====*/

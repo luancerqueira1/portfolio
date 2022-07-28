@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.footer {
+   margin-bottom: 2rem;
+}
+
+.footer-info {
+   text-align: end;
+
+   p {
+      font-weight: 600;
+   }
+}
