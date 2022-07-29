@@ -1,7 +1,7 @@
+/*===== OPEN SIDEBAR MENU =====*/ 
 const menuBtn = document.querySelector('.menu-btn');
 const header = document.querySelector('.nav-content');
 
-// OPEN SIDEBAR MENU
 menuBtn.onclick = () => {
    header.classList.toggle('active');
    menuBtn.classList.toggle('active');
@@ -12,7 +12,7 @@ window.onscroll = () => {
    menuBtn.classList.remove('active');
 }
 
-// SWITCH THEME BTN
+/*===== SWITCH THEME BTN =====*/ 
 const darkMode = document.querySelector('.dark-mode-btn');
 const lightMode = document.querySelector('.light-mode-btn');
 const themeBtn = document.querySelector('.switch-theme-span');
@@ -86,7 +86,7 @@ const popupIcon = document.querySelector('.popup-icon');
 const popupText = document.querySelector('.popup-text');
 const popupBtn = document.querySelector('.popup-btn');
 
-// ERROR
+// POPUP ERROR
 const emptyError = () => {
    popupBg.classList.add('active');
 
@@ -94,7 +94,7 @@ const emptyError = () => {
    popupText.innerHTML = 'Preencha Todos Os Campos';
 };
    
-// SUCCESS
+// POPUP SUCCESS
  const success = () => {
    popupBg.classList.add('active');
 
@@ -129,7 +129,13 @@ function clearInputFields() {
 };
 
 // DATE
-const dateYear = new Date().getFullYear();
 const year = document.querySelector('.date');
+const dateYear = new Date().getFullYear();
 year.innerText = dateYear;
 
+/*===== LOADING ANIMATION =====*/
+const loadingAnimation = document.querySelector('.loader')
+
+window.onload = () => {
+   loadingAnimation.remove('loader');
+}
