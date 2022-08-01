@@ -28,7 +28,6 @@
    height: 30px;
 }
 
-
 .nav-content {
    position: fixed;
    top: 0;
@@ -46,8 +45,8 @@
 
 // SHOW SIDEBAR WHEN ACTIVE
 .nav-content.active {
-   transform: translateX(0);
    transition: transform 600ms ease;
+   transform: translateX(0);
 }
 
 /*===== MENU BUTTON =====*/
@@ -57,12 +56,13 @@
    .bar-top {
       transform: rotate(45deg) translateY(-1px);
    }
+
    .bar-middle {
       opacity: 0;
    }
+
    .bar-bottom { 
       transform: rotate(-45deg) translateY(1px);
-
    }
 }
 
@@ -88,31 +88,23 @@
 }
 
 /*===== THEME =====*/ 
-
 .theme-toggle {
    display: inline-block;
-   
 }
 
 .theme-switch {
    position: relative;
    border-radius: 100rem;
    transition: all 300ms linear;
-   box-shadow: var(--box-shadow);
    background-color: var(--color-background);
-   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.100);
-   
-
 }
 
 .theme-switch-btns {
    display: flex;
    align-items: center;
    border-radius: 100rem;
-   transition: all 300ms linear;
+   transition: var(--transition);
    background-color: var(--color-background);
-   
-   
 }
 
 .switch-theme-span {
@@ -124,9 +116,7 @@
    z-index: 100;
    border-radius: 100rem;
    background-color: var(--dark-color-2);
-  
 }
-
 
 // BTNS ICONS
 .theme-btn{
@@ -137,25 +127,25 @@
    padding: .24rem .7rem;
    cursor: pointer;
    z-index: 200;  
+   transition: var(--transition);
 }
 
 .dark-mode-btn{
-  
    width:100%; 
 }
+
 .light-mode-btn{
-   
    width:100%; 
 }
 
 .light-mode-active{
-   transition: all 300ms linear;
+   transition: var(--transition);
    transform: translateX(100%);
 }
-.dark-mode-active{
-   transition: all 300ms linear;
-   transform: translateX(0);
 
+.dark-mode-active{
+   transition: var(--transition);
+   transform: translateX(0);
 }
 
 .theme-icon {
@@ -165,7 +155,6 @@
 
 .dark-mode-icon {
    color: #020202;
-   
 }
 
 .light-mode-icon {
@@ -178,7 +167,7 @@
    box-shadow: var(--box-shadow);
 }
 
-.navbar  {
+.navbar-links{
    margin-top: 1rem; 
 }
 
@@ -198,7 +187,6 @@
 
    &:hover {
       background-color: var(--secondary-color);
-
    }
 }
 
@@ -216,31 +204,28 @@
       transform: none;
       box-shadow: none;
       transition: all 300ms ease;
-      // border: 2px solid blue;
       padding: 0;
    }
-   .navbar {
-      transition:all 300ms ease;
-      margin: 0 ;
-   }
+
    .navbar-links {
       display: flex;
       align-items: center;
+      justify-content: center;
       transition: transform 300ms ease;
-      margin-right: 1rem;
+      margin: 0 1rem 0 0;
    }
 
    .navbar-link {
-      margin:0 .3rem  0;
+      margin: 0 .5rem;
    }
+   
    .theme-toggle {
       order: 1;
    }
+
    .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 300ms ease;
    }
-
 }

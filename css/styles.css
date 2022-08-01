@@ -193,8 +193,8 @@ textarea {
 }
 
 .nav-content.active {
-  transform: translateX(0);
   transition: transform 600ms ease;
+  transform: translateX(0);
 }
 
 /*===== MENU BUTTON =====*/
@@ -237,16 +237,14 @@ textarea {
   position: relative;
   border-radius: 100rem;
   transition: all 300ms linear;
-  box-shadow: var(--box-shadow);
   background-color: var(--color-background);
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .theme-switch-btns {
   display: flex;
   align-items: center;
   border-radius: 100rem;
-  transition: all 300ms linear;
+  transition: var(--transition);
   background-color: var(--color-background);
 }
 
@@ -269,6 +267,7 @@ textarea {
   padding: 0.24rem 0.7rem;
   cursor: pointer;
   z-index: 200;
+  transition: var(--transition);
 }
 
 .dark-mode-btn {
@@ -280,12 +279,12 @@ textarea {
 }
 
 .light-mode-active {
-  transition: all 300ms linear;
+  transition: var(--transition);
   transform: translateX(100%);
 }
 
 .dark-mode-active {
-  transition: all 300ms linear;
+  transition: var(--transition);
   transform: translateX(0);
 }
 
@@ -308,7 +307,7 @@ textarea {
   box-shadow: var(--box-shadow);
 }
 
-.navbar {
+.navbar-links {
   margin-top: 1rem;
 }
 
@@ -346,20 +345,16 @@ textarea {
     padding: 0;
   }
 
-  .navbar {
-    transition: all 300ms ease;
-    margin: 0;
-  }
-
   .navbar-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: transform 300ms ease;
-    margin-right: 1rem;
+    margin: 0 1rem 0 0;
   }
 
   .navbar-link {
-    margin: 0 0.3rem 0;
+    margin: 0 0.5rem;
   }
 
   .theme-toggle {
@@ -370,7 +365,6 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 300ms ease;
   }
 }
 .aboutme-info {

@@ -1,3 +1,4 @@
+
 /*===== LOADING ANIMATION =====*/
 const loadingAnimation = document.querySelector('.loader');
 
@@ -28,6 +29,7 @@ const lightMode = document.querySelector('.light-mode-btn');
 const themeBtn = document.querySelector('.switch-theme-span');
 const pageTheme = localStorage.getItem('theme');
 
+
 const defaultTheme = () => {
    themeBtn.classList.remove('light-mode-active');
    themeBtn.classList.add('dark-mode-active');
@@ -50,7 +52,8 @@ const checkTheme = () => {
       defaultTheme();
 
       document.body.classList.remove('light-theme');
-   } else if (themeSet == 'light-mode-active') {
+   }
+   else if (themeSet == 'light-mode-active') {
       setLightTheme();
    }
 };
