@@ -1,26 +1,26 @@
 @use 'variables' as *;
 
-
 .aboutme-info {
    max-width: 40rem;
    margin: 0 auto;
+   display: grid;
+   place-items: center;
 }
 
 .aboutme-avatar{
-   margin: 0 auto;
    width: 150px;
    height: 150px;
-   border-radius: 50%;
    overflow: hidden;
-   background-color: var(--color-backgroundr);
+   border-radius: 50%;
+   background-color: var(--secondary-color);
    box-shadow: var(--box-shadow);
 }
-
 
 .avatar-img {
    width: 100%;
    height: 100%;
-   object-fit: center;
+   object-fit: cover;
+   object-position: 50%  40%;
 }
 
 .info-text {
@@ -68,7 +68,6 @@
 }
 
 .socials {
-   max-width: 40rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -90,17 +89,16 @@
    background-color: var(--secondary-color);
    border: .1rem solid var(--dark-color-2);
 }
-
-.social-link-icon{
-   font-size: 20px;
-   color: var(--primary-color);
-}
-
 .social-link:hover {
    transform: scale(1.1);
    background-color: transparent;
    color: var(--secondary-color);
    border-color: var(--secondary-color);
+}
+
+.social-link-icon{
+   font-size: 20px;
+   color: var(--primary-color);
 }
 
 .social-link:hover .social-link-icon{
