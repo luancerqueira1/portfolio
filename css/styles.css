@@ -32,12 +32,11 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 1rem;
   font-family: var(--font-primary);
 }
 
 body {
-  background-color: var(--color-background);
   color: var(--font-color);
   transition: all 400ms ease-in-out;
   font-size: 0.9rem;
@@ -57,7 +56,8 @@ li {
 }
 
 section {
-  margin: 5rem 0 5rem;
+  padding: 5rem 0 0rem;
+  background-color: var(--color-background);
 }
 
 textarea {
@@ -720,7 +720,8 @@ textarea {
 }
 
 .footer {
-  margin-bottom: 2rem;
+  padding: 3rem 0;
+  background-color: var(--color-background);
 }
 
 .footer-info {
