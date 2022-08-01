@@ -16,9 +16,8 @@
 ### Screenshots 
 
 <div align="center">
-   Mobile Version
+   Mobile Version <br> Desktop Version
    <a href="img/readme/portfolio-mobile" target="_blank"><img src="img/readme/portfolio-mobile.png" width="45%" height="60%"/></a> 
 
-   Desktop Version
    <a href="img/readme/portfolio-desktop" target="_blank"><img src="img/readme/portfolio-desktop.png" width="45%" height="60%"/></a> 
 </div>
