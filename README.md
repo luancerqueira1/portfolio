@@ -17,12 +17,12 @@
 
 <div align="center">
 Mobile Version<br>
-<a href="img/readme/portfolio-mobile.png" target="_blank"><img src="src/design/desktop-design.jpg" width="45%" height="60%"/></a> 
+<a href="img/readme/portfolio-mobile" target="_blank"><img src="img/readme/portfolio-mobile.png" width="45%" height="60%"/></a> 
 </div>
 
 <br>
 
 <div align="center">
 Desktop Version<br>
-<a href="img/readme/portfolio-desktop.png" target="_blank"><img src="src/design/desktop-design.jpg" width="40%" height="60%"/></a> 
+<a href="img/readme/portfolio-desktop" target="_blank"><img src="img/readme/portfolio-desktop.png" width="45%" height="60%"/></a> 
 </div>
