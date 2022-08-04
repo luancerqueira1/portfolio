@@ -90,18 +90,22 @@
    border: .1rem solid var(--dark-color-2);
 }
 
-.social-link:hover {
-   transform: scale(1.1);
-   background-color: transparent;
-   color: var(--secondary-color);
-   border-color: var(--secondary-color);
-}
-
 .social-link-icon{
    font-size: 20px;
    color: var(--primary-color);
 }
 
-.social-link:hover .social-link-icon{
-   color: var(--secondary-color);
+
+/*===== RESPONSIVE =====*/
+@media (min-width: $breakpoint-md) { 
+   .social-link:hover {
+      transform: scale(1.1);
+      background-color: transparent;
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+   }
+
+   .social-link:hover .social-link-icon {
+      color: var(--secondary-color);
+   }
 }

@@ -1,6 +1,6 @@
 :root {
-  --color-background: #181a1e;
-  --primary-color: #202528;
+  --color-background: #131415;
+  --primary-color: #181a1e;
   --secondary-color: #4285f4;
   --dark-color: #222429;
   --dark-color-2: rgb(77, 74, 74);
@@ -455,22 +455,24 @@ textarea {
   border: 0.1rem solid var(--dark-color-2);
 }
 
-.social-link:hover {
-  transform: scale(1.1);
-  background-color: transparent;
-  color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
 .social-link-icon {
   font-size: 20px;
   color: var(--primary-color);
 }
 
-.social-link:hover .social-link-icon {
-  color: var(--secondary-color);
-}
+/*===== RESPONSIVE =====*/
+@media (min-width: 1024px) {
+  .social-link:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
 
+  .social-link:hover .social-link-icon {
+    color: var(--secondary-color);
+  }
+}
 .projects-content {
   display: grid;
   gap: 3rem;
@@ -532,32 +534,11 @@ textarea {
   padding: 1rem;
 }
 
-.project-link:hover {
-  transition: var(--transition);
-  animation: poplink 2s infinite linear;
-}
-
 .project-link-icon {
   font-size: 20px;
   color: var(--font-color);
 }
 
-.project-link:hover .project-link-icon {
-  color: var(--secondary-color);
-  transition: var(--transition);
-}
-
-@keyframes poplink {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /*===== RESPONSIVE =====*/
 @media (min-width: 768px) {
   .projects-content {
@@ -583,11 +564,32 @@ textarea {
     background-color: var(--dark-color);
   }
 
+  .project-link:hover {
+    transition: var(--transition);
+    animation: poplink 2s infinite linear;
+  }
+
   .project-box:hover .project-overlay {
     transition: var(--transition);
     transform: translateY(0);
   }
 
+  .project-link:hover .project-link-icon {
+    color: var(--secondary-color);
+    transition: var(--transition);
+  }
+
+  @keyframes poplink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   .project-overlay-title {
     display: block;
     margin: 1rem;
