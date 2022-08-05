@@ -550,6 +550,10 @@ textarea {
     height: 16rem;
   }
 
+  .project-img {
+    transition: transform 400ms linear;
+  }
+
   /*===== OVERLAY =====*/
   .project-overlay {
     position: absolute;
@@ -567,6 +571,10 @@ textarea {
   .project-link:hover {
     transition: var(--transition);
     animation: poplink 2s infinite linear;
+  }
+
+  .project-box:hover .project-img {
+    transform: scale(1.05);
   }
 
   .project-box:hover .project-overlay {
