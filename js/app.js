@@ -72,7 +72,7 @@ lightMode.onclick = () => {
 
 /*===== ADD ACTIVE CLASS IN SELECTED TAB =====*/
 const navLink = document.querySelectorAll('.navbar-link');
-function activeLink() {
+const activeLink = () => {
    navLink.forEach((link) => {
       link.classList.remove('nav-link-active');
       this.classList.add('nav-link-active');
@@ -84,7 +84,7 @@ navLink.forEach((link) => {
 });
 
 /*===== EMAIL JS =====*/
-function validate() {
+const validate = () => {
    let name = document.querySelector('.form-name');
    let email = document.querySelector('.form-email');
    let message = document.querySelector('.form-message');
@@ -107,7 +107,7 @@ function validate() {
 validate();
 
 // SEND EMAIL
-function sendEmail(name, email, message) {
+const sendEmail =  (name, email, message) => {
    emailjs.send('service_6m5agqf', 'template_3jyk46p', {
       from_name: name,
       to_name: email,
@@ -155,7 +155,7 @@ popupBtn.onclick = () => {
 };
 
 //CLEAR FIELDS WHEN MESSAGE SENT
-function clearInputFields() {
+const  clearInputFields = () =>{
    let name = document.querySelector('.form-name');
    let email = document.querySelector('.form-email');
    let message = document.querySelector('.form-message');
