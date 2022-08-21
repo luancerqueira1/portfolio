@@ -1,4 +1,3 @@
-
 /*===== LOADING ANIMATION =====*/
 const loadingAnimation = document.querySelector('.loader');
 
