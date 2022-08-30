@@ -72,7 +72,7 @@ lightMode.onclick = () => {
 
 /*===== ADD ACTIVE CLASS IN SELECTED TAB =====*/
 const navLink = document.querySelectorAll('.navbar-link');
-const activeLink = () => {
+function activeLink () {
    navLink.forEach((link) => {
       link.classList.remove('nav-link-active');
       this.classList.add('nav-link-active');
