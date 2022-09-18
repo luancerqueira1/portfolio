@@ -16,6 +16,7 @@
 .logo {
    display: flex;
    align-items: center;
+   animation: slideIn 1.5s ease;
 }
 
 .logo-title {
@@ -92,6 +93,7 @@
 /*===== THEME =====*/ 
 .theme-toggle {
    display: inline-block;
+   animation: slideInBtns 1s backwards 300ms;
 }
 
 .theme-switch {
@@ -170,7 +172,34 @@
 }
 
 .navbar-links{
-   margin-top: 1rem; 
+   margin-top: 1rem;
+}
+
+.navbar-links li {
+   animation: slideInBtns 1s backwards;
+}
+
+.navbar-links li:nth-child(1) {
+   animation-delay: 600ms;
+}
+.navbar-links li:nth-child(2) {
+   animation-delay: 800ms;
+}
+.navbar-links li:nth-child(3) {
+   animation-delay: 1s;
+}
+
+/*NAV LINKS ANIMATION*/
+@keyframes slideInBtns {
+   0% {
+      opacity: 0;
+      transform: translateX(40px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
 }
 
 .navbar-link {
@@ -192,6 +221,17 @@
    }
 }
 
+/*NAV LOGO ANIMATION*/
+@keyframes slideIn {
+   0%{
+      opacity: 0;
+      transform: translateX(-40px);
+   }
+   100%{
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
 /*===== RESPONSIVE =====*/
 @media (min-width: $breakpoint-sm){
    .logo-title{
@@ -230,6 +270,7 @@
    
    .theme-toggle {
       order: 1;
+      animation: slideInBtns 1s backwards 1.5s;
    }
 
    .header-content {
