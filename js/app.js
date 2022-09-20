@@ -9,17 +9,20 @@ window.onload = () => {
 };
 
 /*===== OPEN SIDEBAR MENU =====*/
-const menuBtn = document.querySelector('.menu-btn');
 const header = document.querySelector('.nav-content');
+const menuBtn = document.querySelector('.menu-btn');
+
 
 menuBtn.onclick = () => {
-   header.classList.toggle('active');
-   menuBtn.classList.toggle('active');
+   header.classList.toggle('sidebar-open');//sidebar-open
+   menuBtn.classList.toggle('sidebar-open');
+   linkAnimadeIn();
+  
 };
 
 window.onscroll = () => {
-   header.classList.remove('active');
-   menuBtn.classList.remove('active');
+   header.classList.remove('sidebar-open');
+   menuBtn.classList.remove('sidebar-open');
 };
 
 /*===== CHECK THEME =====*/
@@ -75,6 +78,7 @@ const navLink = document.querySelectorAll('.navbar-link');
 function activeLink () {
    navLink.forEach((link) => {
       link.classList.remove('nav-link-active');
+      link.classList.remove('active');
       this.classList.add('nav-link-active');
    });
 }
@@ -82,6 +86,15 @@ function activeLink () {
 navLink.forEach((link) => {
    link.addEventListener('click', activeLink);
 });
+
+/*ANIMATE LINKS IN*/ 
+const linkAnimadeIn = () => {
+   const linkAnime = document.querySelectorAll('.navbar-link');
+
+   linkAnime.forEach((link) => {
+      link.classList.toggle('active');
+   });
+};
 
 /*===== EMAIL JS =====*/
 const validate = () => {

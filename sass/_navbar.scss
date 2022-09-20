@@ -47,14 +47,14 @@
 }
 
 // SHOW SIDEBAR WHEN ACTIVE
-.nav-content.active {
+.nav-content.sidebar-open {
    transition: transform 600ms ease;
    transform: translateX(0);
 }
 
 /*===== MENU BUTTON =====*/
 // SHOW SIDEBAR BTN X WHEN HEADER IS ACTIVE
-.menu-btn.active {
+.menu-btn.sidebar-open {
 
    .bar-top {
       transform: rotate(45deg) translateY(-1px);
@@ -175,18 +175,18 @@
    margin-top: 1rem;
 }
 
-.navbar-links li {
+.navbar-links .navbar-link.active {
    animation: slideInBtns 1s backwards;
 }
 
-.navbar-links li:nth-child(1) {
+.navbar-links .navbar-link.active:nth-child(1) {
+   animation-delay: 300ms;
+}
+.navbar-links .navbar-link.active:nth-child(2) {
    animation-delay: 600ms;
 }
-.navbar-links li:nth-child(2) {
+.navbar-links .navbar-link.active:nth-child(3) {
    animation-delay: 800ms;
-}
-.navbar-links li:nth-child(3) {
-   animation-delay: 1s;
 }
 
 /*NAV LINKS ANIMATION*/
@@ -266,6 +266,20 @@
 
    .navbar-link {
       margin: 0 .5rem;
+   }
+   .navbar-links .navbar-link{
+      animation: slideInBtns 1s backwards;
+   }
+   .navbar-links li:nth-child(1) {
+      animation-delay: 300ms;
+   }
+
+   .navbar-links .navbar-link:nth-child(2) {
+      animation-delay: 600ms;
+   }
+
+   .navbar-links .navbar-link:nth-child(3) {
+      animation-delay: 800ms;
    }
    
    .theme-toggle {
